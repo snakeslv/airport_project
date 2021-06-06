@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "username": "Snake",
+      "email": "sn4k3zzz@gmail.com",
+      "password": "password",
+      "firstname": "Slava",
+      "lastname": "Borisov",
+      "group": "Admin"
+    },
+    {
+      "username": "user",
+      "email": "asd@mail.ru",
+      "password": "123",
+      "firstname": "Sla",
+      "lastname": "AAa",
+      "group": "Users"
+    },
+    {
+      "username": "employee",
+      "email": "ask@mail.ru",
+      "password": "123",
+      "firstname": "Employ",
+      "lastname": "Ment",
+      "group": "Employees"
+    },
+    {
+      "username": "test",
+      "email": "test@mail.ru",
+      "password": "test",
+      "firstname": "Test",
+      "lastname": "Test",
+      "group": "Users"
+    }
+  ]
+}

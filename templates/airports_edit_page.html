@@ -1,0 +1,37 @@
+{% extends "airports.html" %}
+{% load o %}
+
+
+{% block title %}Рейсы{% endblock %}
+{% block heading %}Список рейсов{% endblock %}
+{% block mainbody %}
+    {% if user|o:"Employees" or user|o:"Admin" %}
+        {% for x in src.airports %}
+            {% if x.number == airport_id %}
+    <form method="post" action="{% url 'airports_edit' airport_id %}">
+        {% csrf_token %}
+        <div class="forms" style="width: 40%; margin-top: 3%; margin-left: 30%;">
+            <div class="form-row">
+      <input id="number" required="" type="text" name="number" maxlength="100" value="{{ x.number }}"><label for="number">ID</label>
+            </div>
+            <div class="form-row">
+      <input id="name" required="" type="text" name="name" maxlength="100" value="{{ x.name}}"><label for="name">Name</label>
+            </div>
+    <div class="form-row">
+      <input id="country" required="" type="text" name="country" maxlength="100" value="{{ x.country }}"><label for="country">Country</label>
+        </div>
+    <div class="form-row">
+      <input id="city" required="" type="text" name="city" maxlength="100" value="{{ x.city }}"><label for="city">City</label>
+        </div>
+    <div class="form-row">
+      <input id="address" required="" type="text" name="address" maxlength="100" value="{{ x.address }}"><label for="address">Location</label>
+        </div>
+            <input type="submit" value="submit" />
+        </div>
+
+            </div>
+        </form>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endblock %}

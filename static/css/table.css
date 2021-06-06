@@ -1,0 +1,35 @@
+table {
+font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+font-size: 14px;
+border-collapse: collapse;
+text-align: center;
+}
+th:first-child {
+border-width: 0 0px 0px 0px;
+}
+th {
+background: #FFFFFF;
+padding: 10px 20px;
+    font-size: 20px;
+font-family: "Bw Surco Medium";
+color: rgb(41, 41, 41);
+line-height: 1.2;
+    border-style: solid;
+border-color: darkgrey;
+    border-width: 0 0 0 0;
+}
+
+td {
+    padding: 10px 20px;
+    background: #FFFFFF;
+    font-size: 16px;
+font-family: "Bw Surco Regular";
+color: rgb(103, 103, 103);
+line-height: 1.2;
+    border-style: solid;
+border-color: darkgrey;
+    border-width: 0px 1px 0px 0px;
+}
+th:first-child, td:first-child {
+text-align: center;
+}

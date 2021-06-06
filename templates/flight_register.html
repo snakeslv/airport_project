@@ -1,0 +1,34 @@
+{% extends "registration/login.html" %}
+{% load o %}
+
+
+{% block title %}Рейсы{% endblock %}
+{% block heading %}Список рейсов{% endblock %}
+{% block mainbody %}
+<div class="thirdblock2">
+  <form class="forms2" action="/frs/" method="post">
+      {% csrf_token %}
+      <div class="form-row">
+      <input id="airport_id" name="airport_id" type="hidden" value="{{ airport_id }}">
+      <input id="flight_id" name="flight_id" type="hidden" value="{{ flight_id }}">
+      <input id="lastname" autofocus="" required="" type="text" name="lastname" maxlength="100"><label for="lastname">Фамилия: </label>
+          </div>
+      <div class="form-row">
+      <input id="firstname" autofocus="" required="" type="text" name="firstname" maxlength="100"><label for="firstname">Имя: </label>
+          </div>
+      <div class="form-row">
+      <input id="secondname" autofocus="" required="" type="text" name="secondname" maxlength="100"><label for="secondname">Отчество: </label>
+          </div>
+          <div class="form-row">
+      <input id="gender" autofocus="" required="" type="text" name="gender" maxlength="100"><label for="gender">Пол: </label>
+              </div>
+              <div class="form-row">
+      <input id="birthdate" autofocus="" required="" type="text" name="birthdate" maxlength="100"><label for="birthdate">Дата рождения: </label>
+                  </div>
+                  <div class="form-row">
+      <input id="nationality" autofocus="" required=""  type="text" name="nationality" maxlength="100"><label for="nationality">Гражданство: </label>
+                      </div>
+      <input type="submit" value="OK">
+</form>
+</div>
+{% endblock %}

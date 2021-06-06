@@ -1,0 +1,350 @@
+
+	@font-face
+	{
+    	font-family: 'Fira Sans Book';
+    	src: local('Fira Sans Book'), local('FiraSans-Book'), url('Firasansbook.woff2') format('woff2'), url('Firasansbook.woff') format('woff'), url('Firasansbook.ttf') format('truetype');
+    	font-weight: 300;
+    	font-style: normal;
+	}
+
+	@font-face
+	{
+    	font-family: 'Fira Sans Hair';
+    	src: local('Fira Sans Hair'), local('FiraSans-Hair'), url('FiraSans-Hair.ttf') format('truetype');
+    	font-weight: 100;
+    	font-style: normal;
+	}
+
+	@font-face
+	{
+    	font-family: 'Fira Sans Eight';
+    	src: local('Fira Sans Eight'), local('FiraSans-Eight'), url('FiraSans-Eight.ttf') format('truetype');
+    	font-weight: 100;
+    	font-style: normal;
+	}
+
+	@font-face
+	{
+    	font-family: 'Bw Surco Book';
+    	src: local('Bw Surco Book'), local('BwSurco-Book'), url('BwSurco-Book.otf') format('opentype');
+    	font-weight: 200;
+    	font-style: normal;
+	}
+
+	@font-face
+	{
+    	font-family: 'Bw Surco BookItalic';
+    	src: local('Bw Surco BookItalic'), local('BwSurco-BookItalic'), url('BwSurco-BookItalic.otf') format('opentype');
+    	font-weight: 200;
+    	font-style: italic;
+	}
+
+	@font-face
+	{
+    	font-family: 'Bw Surco Medium';
+    	src: local('Bw Surco Medium'), local('BwSurco-Medium'), url('BwSurco-Medium.otf') format('opentype');
+    	font-weight: 400;
+    	font-style: italic;
+	}
+
+	@font-face
+	{
+    	font-family: 'Bw Surco Regular';
+    	src: local('Bw Surco Regular'), local('BwSurco-Regular'), url('BwSurco-Regular.otf') format('opentype');
+    	font-weight: 300;
+    	font-style: italic;
+	}
+
+	@font-face
+	{
+    	font-family: 'Bw Surco MediumItalic';
+    	src: local('Bw Surco MediumItalic'), local('BwSurco-MediumItalic'), url('BwSurco-MediumItalic.otf') format('opentype');
+    	font-weight: 400;
+    	font-style: italic;
+	}
+
+	@font-face
+	{
+    	font-family: 'Bw Surco Bold';
+    	src: local('Bw Surco Bold'), local('BwSurco-Bold'), url('BwSurco-Bold.otf') format('opentype');
+    	font-weight: 300;
+    	font-style: italic;
+	}
+
+
+    .navigation 
+	{
+    	border-width: 1px;
+		border-color: rgb(255, 255, 255);
+		border-style: solid;
+		background-color: rgb(255, 255, 250);
+		box-shadow: 0px 3px 5.18px 1.82px rgba(0, 0, 0, 0.14);
+		position: fixed;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		height: 60px;
+		z-index: 4;
+		margin: 0 auto;
+	}
+	
+    h1
+	{
+	font-family: 'Times new Roman', sans-serif;
+	color:#FFFFFF;
+    font-size:50px;
+	text-align: center;
+	}
+	
+    .entered
+	{
+		display: block;
+		float: right;
+		position: relative;
+		text-align: right;
+		width: 9%;
+		margin-right: 40px;
+		margin-top: 19px;
+	}
+
+	.entered2
+	{
+		display: block;
+		float: right;
+		position: relative;
+		text-align: right;
+		width: 30%;
+		margin-right: 40px;
+		margin-top: 19px;
+		line-height: 0.2;
+		font-size: 5px;
+	}
+
+	.ref
+	{
+		font-size: 20px;
+		font-family: "Bw Surco Regular";
+		color: rgb(89, 89, 89);
+		line-height: 1.2;
+		text-decoration: none;
+		transition: 0.2s;
+		display: inline;
+	}
+
+	.ref1
+	{
+		font-size: 20px;
+		font-family: "Bw Surco Regular";
+		color: rgb(89, 89, 89);
+		line-height: 1.2;
+		text-decoration: none;
+		transition: 0.2s;
+		display: inline;
+	}
+
+	.ref:hover
+	{
+
+  		color: #96031A;
+	  	transform: translateY(-7px);
+
+	}
+	
+
+	.mainbody
+	{
+		margin: 0;
+		background: url(background.jpg) no-repeat;
+		overflow-x: hidden;
+		overflow-y: hidden;
+		height: 100%;
+		background-position: center center;
+		background-attachment: fixed;
+		background-size:cover;
+    }
+
+	.otherbody
+	{
+		margin: 0;
+		overflow-x: hidden;
+		background: url(background2.jpg) no-repeat;
+		height: 100%;
+		background-position: center center;
+		background-attachment: fixed;
+		background-size:cover;
+    }
+
+	.thirdbody
+	{
+		margin: 0;
+		overflow-x: hidden;
+		background: url(background3.jpg) no-repeat;
+		height: 100%;
+		background-position: center center;
+		background-attachment: fixed;
+		background-size:cover;
+    }
+
+	.thirdblock
+	{
+		position: relative;
+    	margin-top:6%;
+		margin-left:34%;
+		margin-right:40%;
+		border-radius: 30px 30px 30px 30px;
+    	background: #FFFFFF;
+		overflow:auto;
+		padding: 10px;
+		width: 30%;
+    }
+
+	.thirdblock2
+	{
+		position: relative;
+    	margin-top:6%;
+		margin-left:34%;
+		margin-right:40%;
+		border-radius: 30px 30px 30px 30px;
+    	background: #FFFFFF;
+		overflow:auto;
+		padding: 10px;
+		width: 40%;
+    }
+
+	p 
+	{
+    	margin-top: -1em;
+		margin-bottom: 2em;
+    }
+	
+	.mainblock
+	{
+
+		position: relative;
+    	margin-top:6%;
+		margin-left:2%;
+		margin-right:10%;
+		height: 50%;
+		width: 95%;
+		border-radius: 30px 30px 30px 30px;
+    	background: #FFFFFF;
+		overflow:auto;
+		padding: 10px;
+	}
+
+	.heading
+	{
+		font-size: 43px;
+		font-family: "Bw Surco MediumItalic";
+		color: rgb(255, 255, 255);
+		font-style: italic;
+		line-height: 1.2;
+		text-align: center;
+		position: fixed;
+		top: 39%;
+		left: 50%;
+		margin-top: -17px;
+		margin-left: -210px;
+		width: 420px;
+		height: 34px;
+		z-index: 10;
+	}
+	
+	h2
+	{
+		font-size: 28px;
+		font-family: "Bw Surco Regular";
+		color: rgb(89, 89, 89);
+		text-decoration: none;
+
+	}
+
+	.start
+	{
+		height: 10%;
+		width: 184px;
+		position: fixed;
+		top: 80%;
+		left: 50%;
+		margin-top: -5%;
+		margin-left: -92px;
+
+	}
+
+	.description
+	{
+		font-size: 28px;
+		font-family: "Bw Surco BookItalic";
+		color: rgb(255, 255, 255);
+		font-style: italic;
+		line-height: 1.2;
+		text-align: center;
+		position: fixed;
+		top: 49%;
+		left: 50%;
+		width: 632px;
+		height: 95px;
+		margin-top: -42.5px;
+		margin-left: -316px;
+		z-index: 9;
+	}
+
+	.airbox
+	{
+		font-size: 98.278px;
+		color: rgb(0, 0, 0);
+		line-height: 0.793;
+		-moz-transform: matrix( 0.38109715808262,0,0,0.37140674787746,0,0);
+		-webkit-transform: matrix( 0.38109715808262,0,0,0.37140674787746,0,0);
+		-ms-transform: matrix( 0.38109715808262,0,0,0.37140674787746,0,0);
+		position: fixed;
+		width: 200px;
+		top: -7px;
+		left: 49%;
+		margin-left: -100px;
+		z-index: 6;
+	}
+
+	h3
+	{
+		font-size: 98.278px;
+		color: rgb(0, 0, 0);
+		line-height: 0.793;
+		font-family: "Fira Sans Book";
+		display: inline;
+	}
+
+	h4
+	{
+		font-size: 98.278px;
+		color: rgb(0, 0, 0);
+		line-height: 0.793;
+		font-family: "Fira Sans Hair";
+		display: inline;
+	}
+
+	.forms
+	{
+		margin-top: 10%;
+		margin-left: 17%;
+		font-family: "Bw Surco Medium";
+		font-size: 28px;
+
+	}
+
+	.forms2
+	{
+		margin-top: 4%;
+		margin-left: 17%;
+		font-family: "Bw Surco Medium";
+		font-size: 28px;
+
+	}
+
+	.login
+	{
+		margin-left: 12%;
+		margin-top: 15%;
+	}
+
+    

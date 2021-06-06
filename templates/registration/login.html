@@ -1,0 +1,62 @@
+{% load staticfiles %}
+{% load o %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href=" {% static 'css/style.css' %}">
+    <link rel="stylesheet" href=" {% static 'css/buttons.css' %}">
+    <link rel="stylesheet" href=" {% static 'css/table.css' %}">
+    <link rel="stylesheet" href=" {% static 'css/forms.css' %}">
+    <meta charset="UTF-8">
+    <title>{% block title %}Авторизация{% endblock %}</title>
+</head>
+<body class="thirdbody">
+<div class="navigation">
+    <div class="airbox"><a style="text-decoration: none" href = "{% url 'main' %}"><h3>air</h3><h4>box</h4></a></div>
+    {% if user.is_authenticated or user.group == "Users"%}
+        <div class="entered2">
+            <a style="margin-right: 30px" class="ref1">{{ user.get_username }}</a>
+            <a href="{% url 'logout'%}" class="ref">Sign out</a>
+        </div>
+    {% else %}
+        <div class="entered">
+            <a href = "{% url 'login' %}" class = "ref">Sign in</a>
+        </div>
+    {% endif %}
+</div>
+{% block mainbody %}
+<div class="thirdblock">
+
+    {% if form.errors %}
+        <p><h2>Your username and password didn't match. Please try again.</h2></p>
+    {% endif %}
+    {% if next %}
+        {% if user.is_authenticated or user.group == "Users"%}
+        <p><h2>Your account doesn't have access to this page. To proceed, please login with an account that has access.</h2></p>
+        {% else %}
+            <p><h2>Please login to see this page.</h2></p>
+        {% endif %}
+    {% endif %}
+    <form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+
+        <div class="forms">
+            <div class="form-row">
+                <input type="text" name="username" autofocus="" required="" id="id_username"><label for="id_username">Username</label>
+            </div>
+            <div class="form-row">
+                <input type="password" name="password" required="" id="id_password"><label for="id_password">Password</label><br>
+            </div>
+        </div>
+        <div class="login">
+        <input type="submit" value="login" />
+        <input type="hidden" name="next" value="{{ next }}" />
+            </div>
+        </form>
+    <a class="button3" href = "{% url 'zelolka' %}" class = "ref">Register</a>
+</div>
+{% endblock %}
+</body>
+</html>
+
+

@@ -1,0 +1,30 @@
+{% extends "registration/login.html" %}
+
+
+{% block title %}Регистрация{% endblock %}
+{% block heading %}Регистрация{% endblock %}
+{% block mainbody %}
+<div class="thirdblock2">
+      <form class="forms2" action="/register/" method="post">
+      {% csrf_token %}
+        <div class="form-row">
+      <input id="username" type="text" autofocus="" required="" name="username" maxlength="100"><label for="username">Username</label>
+            </div>
+        <div class="form-row">
+      <input id="email" type="text" autofocus="" required="" name="email" maxlength="100"><label for="email">Email</label>
+            </div>
+        <div class="form-row">
+      <input id="password" type="password" autofocus="" required="" name="password" maxlength="100"><label for="password">Password</label>
+            </div>
+        <div class="form-row">
+      <input id="firstname" type="text" autofocus="" required="" name="firstname" maxlength="100"><label for="firstname">First Name</label>
+            </div>
+        <div class="form-row">
+      <input id="lastname" type="text" autofocus="" required="" name="lastname" maxlength="100"><label for="lastname">Last Name</label>
+            </div>
+
+
+          <input class="button3" type="submit" value="OK">
+    </form>
+</div>
+{% endblock %}

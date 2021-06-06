@@ -1,0 +1,90 @@
+{% load staticfiles %}
+{% load o %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href=" {% static 'css/style.css' %}">
+    <link rel="stylesheet" href=" {% static 'css/buttons.css' %}">
+    <link rel="stylesheet" href=" {% static 'css/table.css' %}">
+    <link rel="stylesheet" href=" {% static 'css/forms.css' %}">
+    <meta charset="UTF-8">
+    <title>{% block title %}Аэропорты{% endblock %}</title>
+</head>
+<body class="otherbody">
+<div class="navigation">
+    <div class="airbox"><a style="text-decoration: none" href = "{% url 'main' %}"><h3>air</h3><h4>box</h4></a></div>
+    {% if user.is_authenticated %}
+        <div class="entered2">
+        {% if user|o:"Admin" %}
+            <a style="margin-right: 30px" class="ref1" href="{% url 'admin_panel' %}">Admin panel</a>
+            {% endif %}
+            <a style="margin-right: 30px" class="ref1">{{ user.get_username }}</a>
+            <a href="{% url 'logout'%}" class="ref">Sign out</a>
+        </div>
+    {% else %}
+        <div class="entered">
+            <a href = "{% url 'login' %}" class = "ref">Sign in</a>
+        </div>
+    {% endif %}
+</div>
+<div class="mainblock">
+{% block mainbody %}
+   <table width="100%" cellpadding="5">
+   <tr>
+       <th>ID</th>
+        <th>Name</th>
+        <th>Country</th>
+	    <th>City</th>
+	    <th>Location</th>
+	    <th style="border-width: 0 0 0 0;">Flights</th>
+   </tr>
+       {% for x in src.airports %}
+        <tr>
+        <td style="border-width: 0 1px 0 0">{{ x.number }}</td>
+        <td>{{ x.name }}</td>
+        <td>{{ x.country }}</td>
+        <td>{{ x.city }}</td>
+        <td>{{ x.address }}</td>
+            <td style="border-width: 0 0 0 1px;"><a class="button2" href="{% url 'flights' x.number %}">Flights</a></td>
+        {% if user|o:"Admin" %}
+            <td style="border-width: 0 0 0 1px;"><a class="button2" href="{% url 'airports_edit_page' x.number %}">Edit</a></td>
+           <td style="border-width: 0 0 0 1px;"><a class="button2" href="{% url 'delete_airport' x.number %}">X</a></td>
+           {% endif %}
+        </tr>
+       {% endfor %}
+
+    {% if user|o:"Admin" %}
+        <form action="/input_airports/" method="post">
+      {% csrf_token %}
+            <tr>
+            <td>
+      <label for="number"></label>
+      <input id="number" required="" type="text" name="number" maxlength="100">
+                </td>
+            <td>
+      <label for="name"></label>
+      <input id="name" required="" type="text" name="name" maxlength="100">
+                </td>
+            <td>
+      <label for="country"></label>
+      <input id="country" required="" type="text" name="country" maxlength="100">
+                </td>
+            <td>
+      <label for="city"></label>
+      <input id="city" required="" type="text" name="city" maxlength="100">
+                </td>
+            <td>
+      <label for="address"></label>
+      <input id="address" required="" type="text" name="address" maxlength="100">
+                </td>
+                <td>
+                    <input class="button1" type="submit" value="Ok">
+                 </td>
+                </tr>
+        </form>
+    {% endif %}
+             </table>
+{% endblock %}
+</div>
+</body>
+</html>

@@ -1,0 +1,223 @@
+{
+  "airports": [
+    {
+      "number": "147",
+      "name": "Changi",
+      "country": "Singapore",
+      "city": "Singapore",
+      "address": "Changi",
+      "flights": [
+        {
+          "id": "0978",
+          "airline": "Emirates",
+          "airplane": "Boeing 777",
+          "departure": "Singapore",
+          "destination": "Beijing",
+          "deptime": "17:00",
+          "destime": "21:00",
+          "passengers": [
+            {
+              "lastname": "Борисов",
+              "firstname": "Святослав",
+              "secondname": "Игоревич",
+              "gender": "МУЖ",
+              "birthdate": "25.08.2000",
+              "nationality": "Россиqw"
+            }
+          ]
+        },
+        {
+          "id": "0394",
+          "airline": "Turkish airlines",
+          "airplane": "Airbus 343",
+          "departure": "London",
+          "destination": "Singapore",
+          "deptime": "15:00",
+          "destime": "23:00",
+          "passengers": []
+        },
+        {
+          "id": "0654",
+          "airline": "SF Airlines",
+          "airplane": "TU-147",
+          "departure": "Singapore",
+          "destination": "Moscow",
+          "deptime": "13:45",
+          "destime": "15:00",
+          "passengers": []
+        }
+      ]
+    },
+    {
+      "number": "102",
+      "name": "Incheon",
+      "country": "South Korea",
+      "city": "Incheon",
+      "address": "Incheon",
+      "flights": [
+        {
+          "id": "091",
+          "airline": "China Southern Airlines",
+          "airplane": "Airbus А330-300",
+          "departure": "Seoul",
+          "destination": "Shanghai",
+          "deptime": "08:35 ; 20th December",
+          "destime": "10:20",
+          "passengers": []
+        },
+        {
+          "id": "072",
+          "airline": "Asiana Airlines",
+          "airplane": "Airbus А321",
+          "departure": "Seoul",
+          "destination": "Sidzouka",
+          "deptime": "9:20",
+          "destime": "13:30",
+          "passengers": []
+        },
+        {
+          "id": "029",
+          "airline": "Jin Air",
+          "airplane": "Boeing 777-200",
+          "departure": "Seoul",
+          "destination": "Thai Bei",
+          "deptime": "10:30",
+          "destime": "14:23",
+          "passengers": []
+        }
+      ]
+    },
+    {
+      "number": "209",
+      "name": "Schiphol",
+      "country": "Netherlands",
+      "city": "Amsterdam",
+      "address": "Haarlemmermeer, North Holland",
+      "flights": [
+        {
+          "id": "167",
+          "airline": "Pegasus",
+          "airplane": "Airbus А320",
+          "departure": "Amsterdam",
+          "destination": "Stambul",
+          "deptime": "00:55",
+          "destime": "05:00",
+          "passengers": []
+        },
+        {
+          "id": "502",
+          "airline": "United Airlines",
+          "airplane": "Boeing 737-800",
+          "departure": "Lille",
+          "destination": "Amsterdam",
+          "deptime": "06:30",
+          "destime": "09:45",
+          "passengers": []
+        }
+      ]
+    },
+    {
+      "number": "287",
+      "name": "Hong Kong International Airport",
+      "country": "China",
+      "city": "Hong Kong",
+      "address": "Chek Lap Kok, Hong Kong",
+      "flights": [
+        {
+          "id": "1177",
+          "airline": "China Southern Airlines",
+          "airplane": "Boeing 737-800",
+          "departure": "Honk Kong",
+          "destination": "Beijing",
+          "deptime": "13:30",
+          "destime": "14:30",
+          "passengers": []
+        }
+      ]
+    },
+    {
+      "number": "329",
+      "name": "Beijing Capital International Airport",
+      "country": "China",
+      "city": "Beijing",
+      "address": "Chaoyang-Shunyi, Beijing",
+      "flights": [
+        {
+          "id": "1789",
+          "airline": "Asiana Airlines",
+          "airplane": "Boeing 737-800",
+          "departure": "Beijing",
+          "destination": "Habarovsk",
+          "deptime": "17:25",
+          "destime": "19:55",
+          "passengers": []
+        }
+      ]
+    },
+    {
+      "number": "476",
+      "name": "Munich Airport",
+      "country": "Germany",
+      "city": "Munich",
+      "address": "Freising, Bavaria",
+      "flights": [
+        {
+          "id": "2101",
+          "airline": "Pegasus",
+          "airplane": "Airbus А320",
+          "departure": "Munich",
+          "destination": "Dusseldorf",
+          "deptime": "15:20",
+          "destime": "16:10",
+          "passengers": []
+        }
+      ]
+    },
+    {
+      "number": "584",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "city": "Dubai",
+      "address": "Garhoud, Dubai",
+      "flights": [
+        {
+          "id": "17781",
+          "airline": "United Arab Airlines",
+          "airplane": "Boeing 777-200",
+          "departure": "Dubai",
+          "destination": "London",
+          "deptime": "14:55",
+          "destime": "18:30",
+          "passengers": []
+        }
+      ]
+    },
+    {
+      "number": "283",
+      "name": "Tokyo Haneda Airport",
+      "country": "Japan",
+      "city": "Tokyo",
+      "address": "Ota, Tokyo",
+      "flights": [
+        {
+          "id": "998",
+          "airline": "Asiana Airlines",
+          "airplane": "Airbus А320",
+          "departure": "Tokyo",
+          "destination": "Hong Kong",
+          "deptime": "03:55 27th December",
+          "destime": "07:00",
+          "passengers": []
+        }
+      ]
+    },
+    {
+      "number": "284",
+      "name": "qweqwe",
+      "country": "qwewqe",
+      "city": "qewqwe",
+      "address": "qweqwe",
+      "flights": []
+    }
+  ]
+}

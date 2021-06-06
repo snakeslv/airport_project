@@ -1,0 +1,80 @@
+{% extends "airports.html" %}
+{% load o %}
+
+
+{% block title %}Рейсы{% endblock %}
+{% block heading %}Список рейсов{% endblock %}
+{% block mainbody %}
+   <table width="100%" cellpadding="5">
+   <tr>
+       <th>Номер рейса</th>
+       <th>Авиакомпания</th>
+       <th>Модель самолета</th>
+       <th>Пункт отправления</th>
+       <th>Пункт прибытия</th>
+       <th>Время отправления</th>
+       <th>Время прибытия</th>
+       {% if user|o:"Employees" or user|o:"Admin" %}
+       <th>Список пассажиров</th>
+       {% endif %}
+   </tr>
+       {% for x1 in z %}
+           <tr>
+           <td>{{ x1.id }}</td>
+           <td>{{ x1.airline}}</td>
+           <td>{{ x1.airplane}}</td>
+           <td>{{ x1.departure}}</td>
+           <td>{{ x1.destination}}</td>
+           <td>{{ x1.deptime}}</td>
+           <td style="border-width: 0 0 0 0;">{{ x1.destime}}</td>
+
+               {% if user|o:"Employees" or user|o:"Admin" %}
+           <td style="border-width: 0 0 0 1px;"><a class="button2" href="{% url 'passengers' airport_id x1.id %}">Passengers</a></td>
+           {% endif %}
+
+           {% if user|o:"Users"%}
+           <td style="border-width: 0 0 0 1px;"><a class="button2" href="{% url 'flight_register' airport_id x1.id %}">Register</a></td>
+           {% endif %}
+
+           {% if user|o:"Employees" or user|o:"Admin" %}
+               <td style="border-width: 0 0 0 1px;" ><a class="button2" href="{% url 'flights_edit_page' airport_id x1.id %}" style="width: 100%">Edit</a></td>
+           <td style="border-width: 0 0 0 1px;" ><a class="button2" href="{% url 'delete_flight' airport_id x1.id %}" style="width: 134%">X</a></td>
+           {% endif %}
+
+           </tr>
+       {% endfor %}
+
+    {% if user|o:"Employees" or user|o:"Admin" %}
+  <form action="/input/" method="post">
+      {% csrf_token %}
+      <tr>
+          <td>
+      <input id="airport_id" name="airport_id" type="hidden" value="{{ airport_id }}">
+      <input id="id" type="text" required="" name="id" maxlength="100" style="width: 52px"><br>
+              </td>
+          <td>
+      <input id="airline" type="text" required="" name="airline" maxlength="100" style="width: 101px"><br>
+          </td>
+              <td>
+      <input id="airplane" type="text" required="" name="airplane" maxlength="100" style="width: 72px"><br>
+          </td>
+          <td>
+      <input id="departure" type="text" required="" name="departure" maxlength="100" style="width: 145px"><br>
+          </td>
+          <td>
+      <input id="destination" type="text" required="" name="destination" maxlength="100" style="width: 145px"><br>
+          </td>
+          <td>
+      <input id="deptime" type="text" required="" name="deptime" maxlength="100" style="width: 52px"><br>
+          </td>
+          <td>
+      <input id="destime" type="text" required="" name="destime" maxlength="100" style="width: 52px"><br>
+              </td>
+        <td>
+      <input type="submit" value="OK">
+          </td>
+  </tr>
+</form>
+    {% endif %}
+    </table>
+{% endblock %}

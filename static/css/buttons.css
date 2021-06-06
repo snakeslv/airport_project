@@ -1,0 +1,178 @@
+
+.button1
+{
+    text-decoration: none;
+    outline: none;
+    display: inline-block;
+    width: 75%;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 45px;
+    font-family: 'Bw Surco Regular', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: #524f4e;
+    background: white;
+    box-shadow: 0 8px 15px rgba(0,0,0,.1);
+    transition: 0.3s;
+    margin: 10px 20px;
+}
+.button1:hover
+{
+  background: #96031A;
+  box-shadow: 0 5px 20px #9C3041;
+  color: white;
+  transform: translateY(-7px);
+}
+
+.button2
+{
+    text-decoration: none;
+    outline: none;
+    display: inline-block;
+    width: 91%;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 45px;
+    font-family: 'Bw Surco Regular', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: #524f4e;
+    background: white;
+    box-shadow: 0 8px 15px rgba(0,0,0,.1);
+    transition: .3s;
+    margin: 10px 2px;
+}
+.button2:hover
+{
+  background: #96031A;
+  box-shadow: 0 5px 20px #9C3041;
+  color: white;
+  transform: translateY(-7px);
+}
+
+input[type=submit]
+{
+    text-decoration: none;
+    outline: none;
+    display: inline-block;
+    width: 90%;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 45px;
+    font-family: 'Bw Surco Regular', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: #524f4e;
+    background: white;
+    box-shadow: 0 8px 15px rgba(0,0,0,.1);
+    transition: 0.3s;
+    margin: 10px 0px;
+}
+input[type=submit]:hover
+{
+    background: #96031A;
+    box-shadow: 0 5px 20px #9C3041;
+    color: white;
+    transform: translateY(-7px);
+}
+
+input[type=submit].button4
+{
+    text-decoration: none;
+    outline: none;
+    display: inline-block;
+    width: 32%;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 45px;
+    font-family: 'Bw Surco Regular', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: #524f4e;
+    background: white;
+    box-shadow: 0 8px 15px rgba(0,0,0,.1);
+    transition: 0.3s;
+    margin: 10px 20px;
+}
+input[type=submit].button4:hover
+{
+    background: #96031A;
+    box-shadow: 0 5px 20px #9C3041;
+    color: white;
+    transform: translateY(-7px);
+}
+
+.button3
+{
+    text-decoration: none;
+    outline: none;
+    display: inline-block;
+    width: 75%;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 45px;
+    font-family: 'Bw Surco Regular', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: #524f4e;
+    background: white;
+    box-shadow: 0 8px 15px rgba(0,0,0,.1);
+    transition: 0.3s;
+    margin-left: 14%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+.button3:hover
+{
+    background: #96031A;
+    box-shadow: 0 5px 20px #9C3041;
+    color: white;
+    transform: translateY(-7px);
+}
+
+.button4
+{
+    text-decoration: none;
+    outline: none;
+    display: inline-block;
+    width: 20%;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 45px;
+    font-family: 'Bw Surco Regular', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: #524f4e;
+    background: white;
+    box-shadow: 0 8px 15px rgba(0,0,0,.1);
+    transition: 0.3s;
+    margin-left: 16%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+.button4:hover
+{
+    background: #96031A;
+    box-shadow: 0 5px 20px #9C3041;
+    color: white;
+    transform: translateY(-7px);
+}

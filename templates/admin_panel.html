@@ -1,0 +1,41 @@
+{% extends "airports.html" %}
+{% load o %}
+
+{% block title %}Admin panel{% endblock %}
+{% block heading %}Список рейсов{% endblock %}
+{% block mainbody %}
+    {% if user|o:"Admin" %}
+<table width="100%" cellpadding="5">
+   <tr>
+       <th>Username</th>
+        <th>Email</th>
+        <th>Password</th>
+	    <th>Firstname</th>
+	    <th>Lastname</th>
+	    <th style="border-width: 0 0 0 0;">Group</th>
+   </tr>
+       {% for x in src.users %}
+        <tr>
+        <td style="border-width: 0 1px 0 0">{{ x.username }}</td>
+        <td>{{ x.email }}</td>
+        <td>{{ x.password }}</td>
+        <td>{{ x.firstname }}</td>
+        <td>{{ x.lastname }}</td>
+        <td style="border-width: 0 0 0 1px;">
+            <form action="/change_group/" method="post">
+            {% csrf_token %}
+            <input id="username" name="username" type="hidden" value="{{ x.username }}">
+            <input name="group" id="group{{ x.username }}" type="radio" value="Admin" {% if x.group == "Admin"%} checked="checked" {% endif %}>Admin
+            <input name="group" id="group{{ x.username }}" type="radio" value="Users"  {% if x.group == "Users"%} checked="checked" {% endif %}>User
+            <input name="group" id="group{{ x.username }}" type="radio" value="Employees" {% if x.group == "Employees"%} checked="checked" {% endif %}>Employee
+            <input class = "button4" type="submit" value="Submit">
+            </form>
+        </td>
+        </tr>
+       {% endfor %}
+             </table>
+
+    {% else%}
+        <h2>Authenticate Error!!Please Log in</h2>
+    {% endif %}
+{% endblock %}

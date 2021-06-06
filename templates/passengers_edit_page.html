@@ -1,0 +1,41 @@
+{% extends "airports.html" %}
+{% load o %}
+
+
+{% block title %}Рейсы{% endblock %}
+{% block heading %}Список рейсов{% endblock %}
+{% block mainbody %}
+    {% if user|o:"Employees" or user|o:"Admin" %}
+        {% for x in z %}
+            {% if x.lastname == pass_lastname and x.firstname == pass_firstname and x.secondname == pass_secondname %}
+    <form method="post" action="{% url 'pass_edit' airport_id flight_id pass_lastname pass_firstname pass_secondname %}">
+        {% csrf_token %}
+        <div class="forms" style="width: 40%; margin-top: 3%; margin-left: 30%;">
+            <div class="form-row" >
+                <input id="airport_id" name="airport_id" type="hidden" value="{{ airport_id }}">
+      <input id="flight_id" name="flight_id" type="hidden" value="{{ flight_id }}">
+      <input id="lastname" required="" type="text" name="lastname" maxlength="100" value="{{ x.lastname }}"><label for="lastname">Lastname</label>
+            </div>
+            <div class="form-row">
+      <input id="firstname" required="" type="text" name="firstname" maxlength="100" value="{{ x.firstname }}"><label for="firstname">Firstname</label>
+            </div>
+    <div class="form-row">
+      <input id="secondname" required="" type="text" name="secondname" maxlength="100" value="{{ x.secondname }}"><label for="secondname">Secondname</label>
+        </div>
+            <div class="form-row">
+      <input id="gender" required="" type="text" name="gender" maxlength="100" value="{{ x.gender }}"><label for="gender">Gender</label>
+        </div>
+    <div class="form-row">
+      <input id="birthdate" required="" type="text" name="birthdate" maxlength="100" value="{{ x.birthdate }}"><label for="birthdate">Birthdate</label>
+        </div>
+    <div class="form-row">
+      <input id="nationality" required="" type="text" name="nationality" maxlength="100" value="{{ x.nationality }}"><label for="nationality">Nationality</label>
+        </div>
+            <input type="submit" value="submit" />
+        </div>
+
+        </form>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endblock %}

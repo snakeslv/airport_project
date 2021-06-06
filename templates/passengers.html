@@ -1,0 +1,63 @@
+{% extends "airports.html" %}
+{% load o %}
+
+{% block title %}Пассажиры{% endblock %}
+{% block heading %}Пассажиры{% endblock %}
+{% block mainbody %}
+   <table width="100%" cellpadding="5">
+   <tr>
+    <th>Фамилия</th>
+    <th>Имя</th>
+	<th>Отчество</th>
+	<th>Пол</th>
+	<th>Дата рождения</th>
+	<th>Гражданство</th>
+   </tr>
+   {% for x3 in z %}
+           <tr>
+           <td>{{ x3.lastname }}</td>
+           <td>{{ x3.firstname}}</td>
+           <td>{{ x3.secondname}}</td>
+           <td>{{ x3.gender}}</td>
+           <td>{{ x3.birthdate}}</td>
+           <td>{{ x3.nationality}}</td>
+           {% if user|o:"Employees" or user|o:"Admin"%}
+               <td style="border-width: 0 0 0 1px;"><a class="button2" href="{% url 'passengers_edit_page' airport_id flight_id x3.lastname x3.firstname x3.secondname %}">Edit</a></td>
+           <td style="border-width: 0 0 0 1px;"><a class="button2" href="{% url 'delete_passenger' airport_id flight_id x3.lastname x3.firstname x3.secondname %}">X</a></td>
+           {% endif %}
+           </tr>
+
+       {% endfor %}
+
+    {% if user|o:"Employees" or user|o:"Admin" %}
+    <form action="/emp_frs/" method="post">
+      {% csrf_token %}
+        <tr>
+            <td>
+      <input id="airport_id" name="airport_id" type="hidden" value="{{ airport_id }}">
+      <input id="flight_id" name="flight_id" type="hidden" value="{{ flight_id }}">
+      <input id="lastname" required="" type="text" name="lastname" maxlength="100"><br>
+            </td>
+                <td>
+      <input id="firstname" required="" type="text" name="firstname" maxlength="100"><br>
+            </td>
+            <td>
+      <input id="secondname" required="" type="text" name="secondname" maxlength="100"><br>
+            </td>
+            <td>
+      <input id="gender" required="" type="text" name="gender" maxlength="100"><br>
+            </td>
+            <td>
+      <input id="birthdate" required="" type="text" name="birthdate" maxlength="100"><br>
+            </td>
+            <td>
+      <input id="nationality" required="" type="text" name="nationality" maxlength="100"><br>
+            </td>
+            <td style="border-width: 0 0 0 0">
+      <input type="submit" value="OK">
+            </td>
+    </tr>
+</form>
+    {% endif %}
+    </table>
+{% endblock %}

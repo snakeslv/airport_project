@@ -1,0 +1,32 @@
+{% load staticfiles %}
+{% load o %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href=" {% static 'css/style.css' %}">
+    <link rel="stylesheet" href=" {% static 'css/buttons.css' %}">
+    <meta charset="UTF-8">
+    <title>{% block title %}Модуль расписания Аэропрортов{% endblock %}</title>
+</head>
+<body class="mainbody">
+  <div class="navigation">
+  <div class="airbox"><a style="text-decoration: none" href = "{% url 'main' %}"><h3>air</h3><h4>box</h4></a></div>
+      {% if user.is_authenticated %}
+          <div class="entered2">
+              <a style="margin-right: 30px" class="ref1">{{ user.get_username }}</a>
+              <a href="{% url 'logout'%}?next={{request.path}}" class="ref">Sign out</a>
+          </div>
+      {% else %}
+          <div class="entered">
+              <a href = "{% url 'login' %}" class = "ref">Sign in</a>
+          </div>
+      {% endif %}
+
+  </div>
+  <div class="heading">Welcome to the airbox</div>
+  <div class="description">is an innovative project that guides people from all over the world with information about flights and makes travel convinient and comfortable</div>
+  <div class="start">
+    <a class="button1" href="{% url 'airports' %}">Start</a>
+  </div>
+</body>
+</html>

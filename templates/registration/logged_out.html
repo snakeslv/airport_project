@@ -1,0 +1,12 @@
+{% extends "airports.html" %}
+
+
+{% block title %}Logged out{% endblock %}
+{% block heading %}Авторизация{% endblock %}
+{% block mainbody %}
+      {% block content %}
+        <p>Logged out!</p>
+        <a href="{% url 'login'%}">Click here to login again.</a>
+        {% endblock %}
+{% endblock %}
+
